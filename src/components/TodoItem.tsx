@@ -25,5 +25,3 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelite }) => {
 };
 
 export default TodoItem;
-
-//aaaaaaaaaa
