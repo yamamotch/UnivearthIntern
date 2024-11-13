@@ -1,5 +1,5 @@
 import React from "react";
-import { ListItem, ListItemText, CardContent, IconButton } from '@mui/material';
+import { ListItem, ListItemText, IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 interface TodoItemProps {
