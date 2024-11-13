@@ -1,18 +1,26 @@
 import React from "react";
-import { Card, CardContent } from '@mui/material';
+import { ListItem, ListItemText, CardContent, IconButton } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 interface TodoItemProps {
     todo: {
         id: number;
         text: string;
     };
+    onDelite: (id:number)=>void;
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ todo }) => {
+const TodoItem: React.FC<TodoItemProps> = ({ todo,onDelite }) => {
     return (
-        < Card >
-        <CardContent>{todo.text}</CardContent>
-            </Card >
+        < ListItem 
+        secondaryAction={
+            <IconButton edge="end"aria-label="delete"onClick={()=>onDelite(todo.id)}>
+                <DeleteIcon />
+            </IconButton>  
+        }
+        >
+        <ListItemText primary={todo.text}/>
+            </ListItem >
         );
 };
 
