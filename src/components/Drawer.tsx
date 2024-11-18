@@ -1,4 +1,5 @@
 import { Drawer } from '@mui/material';
+import DrawerList from './DrawerList'
 
 interface SidebarProps {
     variant: 'temporary' | 'permanent';
@@ -12,9 +13,10 @@ const Sidebar: React.FC<SidebarProps> = ({ variant }) => {
                 open={true}
                 variant={variant}
             >
-                <div style={{ width: 250, padding: '16px' }}>
+                <div style={{ width: 200, padding: '16px' }}>
                     <p>Hello, this is the Drawer content!</p>
                 </div>
+                <DrawerList/>
             </Drawer>
         </>
     );
